@@ -16,16 +16,28 @@
 //  import Emoji from './src/Emoji';
 //  import ExRender from './src/Buoi4/ExRender';
 //  import DemoScroll from './src/Buoi4/DemoScroll';
-import DemoFlatList from './src/Buoi4/DemoFlatList/';
-import Layout from './src/BaiTap4';
-
+// import DemoFlatList from './src/Buoi4/DemoFlatList/';
+// import Layout from './src/BaiTap4';
+// import RockPaperScissor from './src/Buoi5/RockPaperScissor';
+import {Provider} from 'react-redux';
+// import {store} from './src/Buoi6/redux/store';
+import store from './src/Buoi7/redux/store';
+import DemoRedux from './src/Buoi6/DemoRedux';
+import RockPaperScissorRedux from './src/Buoi7/RockPaperScissorRedux';
+import DemoLifeCycle from './src/Buoi8/DemoLifeCycle';
+import DemoCallAPI from './src/Buoi8/DemoCallAPI';
+import ListProductScreen from './src/Buoi9/ListProductScreen';
+import OnBoardScreen from './src/Buoi10/OnBoardScreen';
+import RootScreen from './src/Buoi10';
 // Stateful Component
 class App extends Component {
 
   render() {
-    return <Layout />;
-      
-    
+    return (
+    <Provider store={store}>
+        <ListProductScreen/>
+        </Provider>
+    )
   }
 }
 
